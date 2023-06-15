@@ -1,4 +1,6 @@
 const AsyncFetch = async () => {
+  await new Promise((resolve) => setTimeout(resolve, 4000));
+
   const data = await (
     await fetch("https://api.github.com/repos/tanstack/react-query")
   ).json();
