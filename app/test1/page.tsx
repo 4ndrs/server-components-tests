@@ -1,12 +1,9 @@
-const Test1 = async () => {
-  const data = await (
-    await fetch("https://api.github.com/repos/tanstack/react-query")
-  ).json();
+import AsyncFetch from "./components/async-fetch";
 
+const Test1 = () => {
   return (
     <>
-      <h1>{data.name}</h1>
-      <p>{data.description}</p>
+      <AsyncFetch />
     </>
   );
 };
